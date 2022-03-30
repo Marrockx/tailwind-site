@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply flex flex-col justify-center items-center;
+}
+
+.btn {
+    @apply w-44 h-14 font-bold rounded shadow-lg text-lg text-center my-4 px-4 py-2;
+}
+
+.btn:focus {
+    transform: scale(1.1)
+}
+
+.btn__warning {
+    @apply text-lg px-4 py-1 font-bold font-serif rounded shadow-lg text-center bg-black text-red-500 tracking-wide;
+}
+
+.btn__warning:hover {
+    @apply text-white bg-red-900;
+}
+
+.btn__orange {
+    @apply bg-orange-200 text-orange-500;
+}
+
+.btn__orange:hover {
+    @apply bg-black text-orange-200;
+}
+
+.btn__orange-deep {
+    @apply bg-orange-400 text-white;
+}
+
+.btn__orange-deep:hover {
+    @apply bg-orange-300 text-orange-700;
+}
+
+.alert__box {
+    @apply bg-orange-900 border-r-4 border-orange-400 px-4 py-3 rounded relative my-6;
+}
+
+.alert__notice {
+    @apply font-bold text-orange-200;
+}
+
+.alert__info {
+    @apply block sm:inline text-orange-400 text-sm;
+}
+
+.alert__box-visibility {
+    @apply hidden;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tailwind Website</title>
+		<link rel="stylesheet" href="/public/styles.css" />
+	</head>
+	<body
+		class="bg-orange-100 font-sans h-screen flex flex-col justify-center items-center"
+	>
+		<div class="container relative">
+			<!-- BUTTON COMPONENT  -->
+			<div class="absolute inset-x-6 px-2">
+				<button class="btn__warning block">warning!</button>
+				<span class="text-xs text-red-300">(show or hide)</span>
+			</div>
+			<button class="btn btn__orange" contenteditable="true">
+				Hello World!
+			</button>
+			<button class="btn btn__orange-deep">Hola Todos!</button>
+
+			<!-- ALERT COMPONENT -->
+			<div class="alert__box alert__box-visibility">
+				<strong class="alert__notice">Alert!</strong>
+				<span class="alert__info"
+					>Please change text of first button and update to your choice</span
+				>
+			</div>
+		</div>
+
+		<script src="/public/index.js"></script>
+	</body>
+</html>
