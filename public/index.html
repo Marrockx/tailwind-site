@@ -7,17 +7,15 @@
 		<title>Tailwind Website</title>
 		<link rel="stylesheet" href="/public/styles.css" />
 	</head>
-	<body
-		class="bg-orange-100 transition ease-linear font-sans h-screen flex flex-col justify-center items-center"
-	>
+	<body>
 		<!-- CARD COMPONENT -->
-		<div class="max-w-sm mx-auto my-4 flex p-4 bg-white rounded-lg shadow-xl">
-			<div class="flex-shrink-0 self-center">
-				<img src="img/wave.png" alt="wave-logo" class="h-10 w-10" />
+		<div class="greeting__card">
+			<div class="img__wrap">
+				<img src="img/wave.png" alt="wave-logo" class="img__size" />
 			</div>
-			<div class="ml-4 self-center">
-				<h4 class="font-bold text-lg text-orange-900">Greeting Special</h4>
-				<p class="text-base text-orange-300">Hi There from where you are</p>
+			<div class="greeting__card-col">
+				<h4 class="greeting__card-heading">Greeting Special</h4>
+				<p class="greeting__card-text">Hi There from where you are</p>
 			</div>
 		</div>
 
@@ -25,7 +23,7 @@
 			<!-- BUTTON COMPONENT  -->
 			<div class="warning__action">
 				<button class="btn__warning block">warning!</button>
-				<span class="text-xs text-red-300">(show or hide)</span>
+				<span class="btn__warning-helper">(show or hide)</span>
 			</div>
 			<button class="btn btn__orange" contenteditable="true">
 				Hello World!

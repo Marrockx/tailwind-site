@@ -2,12 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-orange-100 transition ease-linear font-sans h-screen flex flex-col justify-center items-center;
+}
+
+.greeting__card {
+    @apply max-w-sm mx-auto mb-8 flex p-4 bg-white rounded-lg shadow-xl;
+}
+
+.greeting__card-col {
+    @apply ml-4 self-center;
+}
+
+.greeting__card-heading {
+    @apply font-bold text-lg text-orange-900;
+}
+
+.greeting__card-text {
+    @apply text-base text-orange-300;
+}
+
+.img__wrap {
+    @apply flex-shrink-0 self-center;
+}
+
+.img__size {
+    @apply h-10 w-10;
+}
+
+
 .container {
     @apply flex flex-col justify-center items-center;
 }
 
 .btn {
-    @apply w-44 h-14 font-bold rounded shadow-lg text-lg text-center mt-3 px-4 py-2 cursor-pointer;
+    @apply w-44 h-14 font-bold rounded shadow-lg text-lg text-center mb-4 px-4 py-2 cursor-pointer transition translate-x-1 duration-700 ease-in-out;
 }
 
 .btn:focus {
@@ -24,7 +53,11 @@
 }
 
 .btn__warning:hover {
-    @apply text-white bg-red-900 transition translate-x-1 scale-100 duration-100 ease-in-out;
+    @apply text-white bg-red-900 transition translate-x-1 duration-100 ease-in-out;
+}
+
+.btn__warning-helper {
+    @apply text-xs text-red-300;
 }
 
 .btn__orange {
@@ -32,11 +65,11 @@
 }
 
 .btn__orange:hover {
-    @apply bg-black text-orange-200 mt-4;
+    @apply bg-black text-orange-200;
 }
 
 .btn__orange-deep {
-    @apply bg-orange-400 text-white mt-4;
+    @apply bg-orange-400 text-white;
 }
 
 .btn__orange-deep:hover {
