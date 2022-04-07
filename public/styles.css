@@ -476,33 +476,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 300px) {
   .container {
-    max-width: 640px;
+    max-width: 300px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .container {
-    max-width: 768px;
+    max-width: 576px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 684px) {
   .container {
-    max-width: 1024px;
+    max-width: 684px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 960px) {
   .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 960px;
   }
 }
 
@@ -625,7 +619,7 @@ body {
   padding-right: 0.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 576px) {
   .warning__action {
     position: absolute;
   }
@@ -672,6 +666,10 @@ body {
 }
 
 .btn__warning-helper {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
@@ -685,7 +683,7 @@ body {
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
-.btn__orange:hover {
+.btn__orange:hover, .btn__orange:focus-within {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -699,7 +697,7 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.btn__orange-deep:hover {
+.btn__orange-deep:hover, .btn__orange-deep:focus-within {
   --tw-bg-opacity: 1;
   background-color: rgb(253 186 116 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -745,7 +743,7 @@ body {
   color: rgb(251 146 60 / var(--tw-text-opacity));
 }
 
-@media (min-width: 640px) {
+@media (min-width: 576px) {
   .alert__info {
     display: inline;
   }
@@ -764,19 +762,58 @@ body {
   position: absolute;
   bottom: 0px;
   padding: 2rem;
-  font-family: Poppins, serif;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-family: Fira Sans, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(254 215 170 / var(--tw-text-opacity));
 }
 
-.love__icon {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(219 39 119 / var(--tw-text-opacity));
-  -webkit-text-stroke: 2px #7C2D12;
+@media (min-width: 300px) {
+  .footer__link {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
+.love__icon {
+  /* @apply text-pink-600 text-lg hover:scale-110; */
+  display: inline;
+  width: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-text-stroke: 2px #7C2D12;
+  -webkit-animation: bubble 2s ease-in-out infinite backwards;
+          animation: bubble 2s ease-in-out infinite backwards;
+}
+
+@-webkit-keyframes bubble {
+  0%{
+    opacity: 0.4;
+  }
+
+  50%{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes bubble {
+  0%{
+    opacity: 0.4;
+  }
+
+  50%{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}

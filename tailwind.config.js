@@ -18,6 +18,20 @@ module.exports = {
 				"4xl": "2rem",
 			},
 		},
+
+		screens: {
+			'xs': '300px',
+			// => @media (min-width: 300px) { ... }
+
+			'sm': '576px',
+			// => @media (min-width: 576px) { ... }
+
+			'md': '684px',
+			// => @media (min-width: 960px) { ... }
+
+			'lg': '960px',
+			// => @media (min-width: 1440px) { ... }
+		}
 	},
 	plugins: [],
 };

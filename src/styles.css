@@ -52,19 +52,21 @@ body {
     @apply text-xs px-4 py-2.5 font-semibold font-sans rounded-sm shadow-lg text-center bg-white text-red-500 tracking-wide transition ease-in-out duration-1000;
 }
 
-.btn__warning:hover {
+
+.btn__warning:hover{
     @apply text-white bg-red-900 transition translate-x-1 duration-100 ease-in-out;
 }
 
 .btn__warning-helper {
-    @apply text-xs text-red-300;
+    @apply text-xs text-red-300 px-1 py-4;
 }
 
 .btn__orange {
     @apply bg-orange-200 text-orange-500;
 }
 
-.btn__orange:hover {
+.btn__orange:hover,
+.btn__orange:focus-within {
     @apply bg-black text-orange-200;
 }
 
@@ -72,7 +74,8 @@ body {
     @apply bg-orange-400 text-white;
 }
 
-.btn__orange-deep:hover {
+.btn__orange-deep:hover,
+.btn__orange-deep:focus-within {
     @apply bg-orange-300 text-orange-700;
 }
 
@@ -98,11 +101,27 @@ body {
 }
 
 .footer__link {
-    @apply text-lg font-medium font-serif text-orange-200 absolute bottom-0 p-8;
+
+    @apply text-sm font-medium font-sans text-orange-200 absolute bottom-0 p-8 xs:px-0;
 }
 
 .love__icon {
-    @apply text-pink-600 text-lg;
+    /* @apply text-pink-600 text-lg hover:scale-110; */
+    @apply w-6 object-cover inline;
     -webkit-text-stroke: 2px #7C2D12;
+    animation: bubble 2s ease-in-out infinite backwards;
 }
 
+@keyframes bubble {
+    0%{
+        opacity: 0.4;
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
